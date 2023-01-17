@@ -1,7 +1,7 @@
 # Ustawianie adresu ip BeagleBone Black:
 => setenv ipaddr 192.168.0.250
 # Ustawianie adresu ip serwera TFTP:
-=> setenv serverip 192.168.0.251
+=> setenv serverip 192.168.31.203
 # Pobranie pliku device tree i kernela przez TFTP do RAM-u (warto przed tym wyłączyć zaporę na Windowsie):
 => tftpboot 0x80F80000 am335x-boneblack.dtb
 => tftpboot 0x80007FC0 uImage
