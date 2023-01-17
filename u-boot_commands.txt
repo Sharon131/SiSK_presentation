@@ -1,0 +1,11 @@
+# Ustawianie adresu ip BeagleBone Black:
+=> setenv ipaddr 192.168.0.250
+# Ustawianie adresu ip serwera TFTP:
+=> setenv serverip 192.168.0.251
+# Pobranie kernela przez TFTP do RAM-u (warto wyłączyc firewall na Windowsie):
+=> tftpboot 0x80F80000 am335x-boneblack.dtb
+=> tftpboot 0x80007FC0 uImage
+# Wypisywanie logów na UART i użycie aktualnego systemu plików:
+=> setenv bootargs console=ttyO0,115200n8 root=/dev/mmcblk0p2 ro rootfstype=ext4 rootwait
+# Bootowanie:
+bootm 0x80007FC0 - 0x80F80000
