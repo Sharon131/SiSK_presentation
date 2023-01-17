@@ -2,7 +2,7 @@
 => setenv ipaddr 192.168.0.250
 # Ustawianie adresu ip serwera TFTP:
 => setenv serverip 192.168.0.251
-# Pobranie kernela przez TFTP do RAM-u (warto wyłączyc firewall na Windowsie):
+# Pobranie pliku device tree i kernela przez TFTP do RAM-u (warto wyłączyc firewall na Windowsie):
 => tftpboot 0x80F80000 am335x-boneblack.dtb
 => tftpboot 0x80007FC0 uImage
 # Wypisywanie logów na UART i użycie aktualnego systemu plików:
